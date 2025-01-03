@@ -4,7 +4,7 @@
 
 import asyncio, logging
 from config import Config
-from pyrogram import Client as VJ, idle
+from pyrogram import Client as N2, idle
 from typing import Union, Optional, AsyncGenerator
 from logging.handlers import RotatingFileHandler
 from plugins.regix import restart_forwards
@@ -14,8 +14,8 @@ from plugins.regix import restart_forwards
 # Ask Doubt on telegram @KingVJ01
 
 if __name__ == "__main__":
-    VJBot = VJ(
-        "VJ-Forward-Bot",
+    N2Bot = N2(
+        "N2-Forward-Bot",
         bot_token=Config.BOT_TOKEN,
         api_id=Config.API_ID,
         api_hash=Config.API_HASH,
@@ -62,9 +62,9 @@ if __name__ == "__main__":
                 current += 1
                
     async def main():
-        await VJBot.start()
-        bot_info  = await VJBot.get_me()
-        await restart_forwards(VJBot)
+        await N2Bot.start()
+        bot_info  = await N2Bot.get_me()
+        await restart_forwards(N2Bot)
         print("Bot Started.")
         await idle()
 
